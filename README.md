@@ -11,9 +11,12 @@ Este es el proyecto final para desarrollo de aplicaciones de escritorio con Java
     
 3. El proyecto en java clinicaBuenaAventura deberá ejecutarse desde el ide netbeans con la versión trabajada o superior
 
-# Para este proyecto se utilizó:
+### Para este proyecto se utilizó:
 
 1. Oracle 18c 
 2. NetBeans 12.4
 3. Java SE JDK 16 
 4. SqlDeveloper de Oracle 21.2.1
+
+
+
