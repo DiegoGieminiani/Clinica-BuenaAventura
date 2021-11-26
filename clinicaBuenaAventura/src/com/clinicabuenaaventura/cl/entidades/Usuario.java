@@ -3,19 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package clinicabuenaaventura;
+package com.clinicabuenaaventura.cl.entidades;
 
 /**
  *
  * @author Diego Gieminiani
  */
-public class ClinicaBuenaAventura {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
+public class Usuario {
     
 }
