@@ -13,26 +13,20 @@ import com.clinicabuenaaventura.cl.entidades.Usuario;
  * @author Diego Gieminiani
  */
 public class NegUsuario {
-    public boolean inicioSesion(String login, String contrasena)
-    {
+
+    public boolean inicioSesion(String login, String contrasena) {
         Usuario usu = new Usuario();
-        DAOUsuario datUsuario = new DAOUsuario();
-        usu = datUsuario.buscaUsuario(login);
-        if(usu==null)
-        {
+        DAOUsuario datoUsuario = new DAOUsuario();
+        usu = datoUsuario.buscaUsuario(login);
+        if (usu == null) {
             return false;
-        }
-        else
-        {
-            if(usu.getContrasena().equals(contrasena))
-            {
+        } else {
+            if (usu.getContrasena().equals(contrasena)) {
                 return true;
-            }
-            else
-            {
+            } else {
                 return false;
             }
         }
     }
-    
+
 }
