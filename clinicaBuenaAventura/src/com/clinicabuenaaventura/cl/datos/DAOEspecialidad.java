@@ -77,9 +77,9 @@ public class DAOEspecialidad {
 
     public boolean modificar(Especialidad esp) {
         try {
-            PreparedStatement ps = objConn.getConn().prepareStatement(insert);
-            ps.setInt(1, esp.getId_especialidad());
-            ps.setString(2, esp.getNombre_especialidad());
+            PreparedStatement ps = objConn.getConn().prepareStatement(update);
+            ps.setString(1, esp.getNombre_especialidad());
+            ps.setInt(2, esp.getId_especialidad());
             ps.execute();
             return true;
         } catch (SQLException ex) {
