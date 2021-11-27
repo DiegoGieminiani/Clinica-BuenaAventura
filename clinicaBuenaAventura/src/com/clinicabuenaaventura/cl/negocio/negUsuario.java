@@ -5,14 +5,15 @@
  */
 package com.clinicabuenaaventura.cl.negocio;
 
+import com.clinicabuenaaventura.cl.datos.DAOUsuario;
 import com.clinicabuenaaventura.cl.entidades.Usuario;
 
 /**
  *
  * @author Diego Gieminiani
  */
-public class negUsuario {
-    public boolean inicioSesion(String login, String pass)
+public class NegUsuario {
+    public boolean inicioSesion(String login, String contrasena)
     {
         Usuario usu = new Usuario();
         DAOUsuario datUsuario = new DAOUsuario();
@@ -23,7 +24,7 @@ public class negUsuario {
         }
         else
         {
-            if(usu.getPass().equals(pass))
+            if(usu.getContrasena().equals(contrasena))
             {
                 return true;
             }
