@@ -1,0 +1,66 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.clinicabuenaaventura.cl.negocio;
+
+import com.clinicabuenaaventura.cl.entidades.Especialidad;
+import com.clinicabuenaaventura.cl.datos.DAOEspecialidad;
+import java.util.ArrayList;
+
+/**
+ *
+ * @author nicol
+ */
+public class negEspecialidad {
+    private DAOEspecialidad datoEspecialidad= new DAOEspecialidad();
+
+    public ArrayList<Especialidad> listarTodo()
+    {
+        
+        ArrayList<Especialidad> listaEsp = datoEspecialidad.listarTodo();
+        return listaEsp;
+    }
+    
+    public int nextId()
+    {
+        return datoEsp.nextId();
+    }
+    
+    public boolean agregar(Especialidad esp)
+    {
+        if(datoEspecialidad.agregar(esp))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    
+    }
+    public boolean modificar(Especialidad esp)
+    {
+        if(datoEspecialidad.modificar(esp))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    public boolean eliminar(Especialidad esp)
+    {
+        if(datCliente.eliminar(esp))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+        
+    }
+}
