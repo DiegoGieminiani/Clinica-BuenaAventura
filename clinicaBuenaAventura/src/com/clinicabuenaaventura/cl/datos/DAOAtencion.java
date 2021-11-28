@@ -20,7 +20,7 @@ public class DAOAtencion {
     private final String selectAll = "select id_atencion,rut_paciente,nombre_paciente,edad_paciente,fecha_nacimiento_paciente,id_especialidad,id_sistema_salud from atencion";
     private final String selectNextId = "select max(id_atencion)+1 nextid from atencion";
     private final String insert = "insert into atencion(id_atencion,rut_paciente,nombre_paciente,edad_paciente,fecha_nacimiento_paciente,id_especialidad,id_sistema_salud) values (?,?,?,?,?,?,?)";
-    private final String update = "update atencion set id_atencion=?,rut_paciente=?,nombre_paciente=?,edad_paciente=?,fecha_nacimiento_paciente=?,id_especialidad=?,id_sistema_salud where id_atencion=?";
+    private final String update = "update atencion set rut_paciente=?,nombre_paciente=?,edad_paciente=?,fecha_nacimiento_paciente=?,id_especialidad=?,id_sistema_salud=? where id_atencion=?";
     private final String delete = "delete from atencion where id_atencion = ?";
     private static Conexion objConn = Conexion.InstanciaConn();
     private ResultSet rs;
@@ -89,13 +89,13 @@ public class DAOAtencion {
         try {
             java.sql.Date fecha_nacimiento_paciente = new java.sql.Date(ate.getFecha_nacimiento_paciente().getTime());
             PreparedStatement ps = objConn.getConn().prepareStatement(update);
-            ps.setInt(1, ate.getId_atencion());
-            ps.setString(2, ate.getRut_paciente());
-            ps.setString(3, ate.getNombre_paciente());
-            ps.setInt(4, ate.getEdad_paciente());
-            ps.setDate(5, fecha_nacimiento_paciente);
-            ps.setInt(6, ate.getId_especialidad());
-            ps.setInt(7, ate.getId_sistema_salud());
+            ps.setInt(7, ate.getId_atencion());
+            ps.setString(1, ate.getRut_paciente());
+            ps.setString(2, ate.getNombre_paciente());
+            ps.setInt(3, ate.getEdad_paciente());
+            ps.setDate(4, fecha_nacimiento_paciente);
+            ps.setInt(5, ate.getId_especialidad());
+            ps.setInt(6, ate.getId_sistema_salud());
             ps.execute();
             return true;
         } catch (SQLException ex) {
